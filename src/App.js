@@ -1,12 +1,13 @@
-import './App.css';
-import Mainwrapper from './components/Mainwrapper/mainwrapper';
+import React from "react";
+import "./App.css";
+import SmilesContainer from "./components/SmilesContainer/SmilesContainer";
 
 function App() {
-  return (
-    <>
-        <Mainwrapper/>
-    </>
-  );
+    return (
+        <>
+            <SmilesContainer/>
+        </>
+    );
 }
 
 export default App;

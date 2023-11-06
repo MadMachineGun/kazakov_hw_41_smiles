@@ -1,0 +1,21 @@
+.smiles-container {
+    text-align: center;
+}
+
+.smiles-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.smiles-list li {
+    font-size: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.winner {
+    font-size: 2rem;
+    margin-top: 20px;
+}

@@ -1,0 +1,16 @@
+.smiles-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.smiles-list li {
+    font-size: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.smiles-list li:hover {
+    color: #ff9900;
+}
