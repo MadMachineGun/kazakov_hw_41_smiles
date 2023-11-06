@@ -1,12 +1,10 @@
 import './App.css';
-import '.././mainwrapper.js';
+import Mainwrapper from './components/Mainwrapper/mainwrapper';
 
 function App() {
   return (
     <>
-     <div>
-
-     </div>
+        <Mainwrapper/>
     </>
   );
 }
