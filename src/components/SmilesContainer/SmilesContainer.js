@@ -7,7 +7,7 @@ class SmilesContainer extends Component {
         super(props);
         this.state = {
             smiles: SmilesList,
-            winner: null,
+            winners: [],
         };
     }
 
@@ -20,8 +20,8 @@ class SmilesContainer extends Component {
 
     handleShowResults = () => {
         const maxCount = Math.max(...this.state.smiles.map((smile) => smile.count || 0));
-        const winningSmile = this.state.smiles.find((smile) => (smile.count || 0) === maxCount);
-        this.setState({ winner: winningSmile });
+        const winningSmiles = this.state.smiles.filter((smile) => (smile.count || 0) === maxCount);
+        this.setState({ winners: winningSmiles });
     };
 
     render() {
@@ -36,8 +36,15 @@ class SmilesContainer extends Component {
                     ))}
                 </ul>
                 <button onClick={this.handleShowResults}>Show Results</button>
-                {this.state.winner && (
-                    <div className="winner">Переможець: {this.state.winner.symbol}</div>
+                {this.state.winners.length > 0 && (
+                    <div className="winners">
+                        <h2>Переможці:</h2>
+                        <ul>
+                            {this.state.winners.map((winner) => (
+                                <li key={winner.id}>{winner.symbol}</li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
             </div>
         );
@@ -45,3 +52,4 @@ class SmilesContainer extends Component {
 }
 
 export default SmilesContainer;
+

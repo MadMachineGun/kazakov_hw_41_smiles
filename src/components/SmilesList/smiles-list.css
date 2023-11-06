@@ -1,7 +1,9 @@
+
 .smiles-list {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -13,4 +15,27 @@
 
 .smiles-list li:hover {
     color: #ff9900;
+}
+
+.winners {
+    margin-top: 20px;
+}
+
+.winners h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.winners ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.winners li {
+    font-size: 2rem;
+    margin: 1rem;
+    color: #00cc00;
 }
